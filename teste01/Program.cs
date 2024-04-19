@@ -3,37 +3,22 @@ using System.Diagnostics;
 namespace teste01;
 public class Program {
     public static void Main(){
-          // Nome do processo que você deseja monitorar
-        string nomeProcesso = "notepad";
-
-        // Busca o processo pelo nome
-        Process[] processos = Process.GetProcessesByName(nomeProcesso);
-
-        if (processos.Length > 0)
+         try
         {
-            // Pega o primeiro processo encontrado (você pode iterar por todos se houver mais de um)
-            Process processo = processos[0];
+            // Obtém todos os processos atuais em execução no sistema
+            Process[] processos = Process.GetProcesses();
 
-            try
-            {
-                // Obtém o consumo de memória do processo
-                long memoriaConsumida = processo.WorkingSet64;
+            Console.WriteLine("Lista de Processos:");
 
-                Console.WriteLine($"Consumo de memória do processo '{nomeProcesso}': {memoriaConsumida} bytes");
-            }
-            catch (Exception ex)
+            foreach (Process processo in processos)
             {
-                Console.WriteLine("Erro ao acessar o consumo de memória do processo: " + ex.Message);
-            }
-            finally
-            {
-                // Certifique-se de liberar os recursos do processo
-                processo.Dispose();
+                // Exibe o nome e o ID de cada processo
+                Console.WriteLine($"Nome: {processo.ProcessName} | ID: {processo.Id}");
             }
         }
-        else
+        catch (Exception ex)
         {
-            Console.WriteLine("Nenhum processo encontrado com o nome especificado.");
+            Console.WriteLine("Erro ao listar os processos: " + ex.Message);
         }
     }
 }
