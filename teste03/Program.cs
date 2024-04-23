@@ -14,7 +14,7 @@ class Program
             using (PerformanceCounter diskCounter = new PerformanceCounter("Process", "IO Data Bytes/sec", process.ProcessName))
             {
                 diskCounter.NextValue(); 
-                System.Threading.Thread.Sleep(10000); 
+                System.Threading.Thread.Sleep(1000); 
                 float diskUsage = diskCounter.NextValue() / (1024 * 1024); 
                 Console.WriteLine("Uso de disco: " + diskUsage + " MB/s");
             }
@@ -22,7 +22,7 @@ class Program
             using (PerformanceCounter networkCounter = new PerformanceCounter("Process", "IO Other Bytes/sec", process.ProcessName))
             {
                 networkCounter.NextValue(); 
-                System.Threading.Thread.Sleep(10000); 
+                System.Threading.Thread.Sleep(1000); 
                 float networkUsage = networkCounter.NextValue() / (1024 * 1024); 
                 Console.WriteLine("Uso de rede: " + networkUsage + " MB/s");
             }
