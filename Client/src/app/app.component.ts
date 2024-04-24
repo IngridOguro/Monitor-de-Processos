@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActionBarComponent } from './components/action-bar/action-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,5 +14,5 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Client';
+  parentVariable: string = 'Hello from Parent';
 }

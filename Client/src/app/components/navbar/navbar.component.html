@@ -5,10 +5,12 @@
     </button>
     <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarTogglerDemo01">
       <p class="navbar-brand">Monitor de Processos</p>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Processo" aria-label="Search">
+      <form [formGroup]="formulario"  novalidate  class="d-flex" role="search"   (submit)="pesquisar()">
+        <input class="form-control me-2" formControlName="processo" type="search" placeholder="Processo" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
     </div>
   </div>
 </nav>
+<h2>Child Component</h2>
+    <p>Child Variable: {{ childVariable }}</p>
