@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SideBarComponent } from '../side-bar/side-bar.component';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { ActionBarComponent } from '../action-bar/action-bar.component';
+import { SideBarComponent } from '../../components/bars/side-bar/side-bar.component';
+import { NavbarComponent } from '../../components/bars/navbar/navbar.component';
+import { ActionBarComponent } from '../../components/bars/action-bar/action-bar.component';
 
 @Component({
   selector: 'app-processos',
