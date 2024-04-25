@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { DesempenhoComponent } from './components/desempenho/desempenho.component';
+import { ProcessosComponent } from './components/processos/processos.component';
 
 export const routes: Routes = [
-  {path:"", component: AppComponent}, //processos
+  {path:"", component: ProcessosComponent}, //processos
   {path:"desempenho", component: DesempenhoComponent}, //desempenho
 ];
