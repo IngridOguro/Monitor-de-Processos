@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Newtonsoft.Json;
+
 
 class Program
 {
@@ -35,14 +37,17 @@ class Program
         }
 
         // Exibindo o dicionário
-        foreach (var entrada in Processos)
-        {
-            Console.WriteLine($"{entrada.Key}:");
-            foreach (var innerEntry in entrada.Value)
-            {
-                Console.WriteLine($"{{ {innerEntry.Key}: {{ Memory : {innerEntry.Value["memo"]} }} }},");
-            }
-            Console.WriteLine(",");
-        }
+        string json = JsonConvert.SerializeObject(Processos, Formatting.Indented);
+        Console.WriteLine(json);
+
+        // foreach (var entrada in Processos)
+        // {
+        //     Console.WriteLine($"{entrada.Key}:");
+        //     foreach (var innerEntry in entrada.Value)
+        //     {
+        //         Console.WriteLine($"{{ {innerEntry.Key}: {{ Memory : {innerEntry.Value["memo"]} }} }},");
+        //     }
+        //     Console.WriteLine(",");
+        // }
     }
 }
