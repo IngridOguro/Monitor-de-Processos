@@ -23,8 +23,30 @@ class Program
                 
                 // Se a chave já existe, incrementa o valor da chave existente
                 double memory = allProcesses[processo].PrivateMemorySize64 / 1024.0;
+                double cpu = allProcesses[processo].TotalProcessorTime.TotalMinutes;
                 Processos[nomeProcesso][$"{processo}"] = new Dictionary<string, double>();
                 Processos[nomeProcesso][$"{processo}"]["memo"] = memory;
+                Processos[nomeProcesso][$"{processo}"]["cpu"] = cpu;
+                
+                if (OperatingSystem.IsWindows())
+                {
+                    try{
+                        using (PerformanceCounter diskCounter = new PerformanceCounter("Process", "IO Data Bytes/sec", allProcesses[processo].ProcessName))
+                    {
+                        diskCounter.NextValue(); 
+                        System.Threading.Thread.Sleep(50); 
+                        float diskUsage = diskCounter.NextValue() / (1024 * 1024); 
+                        Processos[nomeProcesso][$"{processo}"]["disc"] = diskUsage;
+                        //Console.WriteLine($"{nomeProcesso} disco: " + diskUsage + " MB/s");
+                    }
+                    }
+                    catch (InvalidOperationException ex)
+                        {
+                            // Lidar com a exceção aqui
+                            Console.WriteLine("Ocorreu uma InvalidOperationException: " + ex.Message);
+                        }
+
+                }
             }
             else
             {
@@ -36,18 +58,9 @@ class Program
             }
         }
 
-        // Exibindo o dicionário
+        // Dicionario para json
         string json = JsonConvert.SerializeObject(Processos, Formatting.Indented);
         Console.WriteLine(json);
 
-        // foreach (var entrada in Processos)
-        // {
-        //     Console.WriteLine($"{entrada.Key}:");
-        //     foreach (var innerEntry in entrada.Value)
-        //     {
-        //         Console.WriteLine($"{{ {innerEntry.Key}: {{ Memory : {innerEntry.Value["memo"]} }} }},");
-        //     }
-        //     Console.WriteLine(",");
-        // }
     }
 }
