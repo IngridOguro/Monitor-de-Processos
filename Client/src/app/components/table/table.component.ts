@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
+//import {fetch} from 'node-fetch';
 
 @Component({
   selector: 'app-table',
@@ -16,24 +16,30 @@ export class TableComponent {
   mensagem:string="";
   autenticar():void{
 
-        console.log(this.ListarProcessos())
+        console.log(this.ListarProcessos());
 
   }
 
-  r = "";
-
-  async ListarProcessos(){
-
-    const request = await fetch('https://localhost:7231/process', {
+ListarProcessos(){
+  async function fazerRequisicao() {
+    const url = 'https://localhost:7055/Processos';
+    const options = {
       method: 'GET',
       headers: {
-        'accept': '*/*'
+        'Accept': 'text/plain'
       }
-    });
+    };
 
-    const show = await request.json();
-
-    return show
-
+    try {
+      const resposta = await fetch(url, options);
+      const texto = await resposta.json();
+      console.log('Resposta:', texto);
+    } catch (erro) {
+      console.error('Erro ao fazer requisição:', erro);
+    }
   }
+
+  fazerRequisicao();
+
+}
 }

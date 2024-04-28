@@ -35,7 +35,6 @@ namespace WebApplication1.Controllers
             for (int processo = 0; processo < allProcesses.Length; processo++)
             {
                 string nomeProcesso = allProcesses[processo].ProcessName;
-                Console.WriteLine(allProcesses[processo]);
                 try { 
                     if (!Processos.ContainsKey(nomeProcesso))
                     {
@@ -54,7 +53,7 @@ namespace WebApplication1.Controllers
                 {
                     Console.WriteLine("Ocorreu uma InvalidOperationException: " + ex.Message);
                 }
-                ////////////////
+                
                 if (OperatingSystem.IsWindows())
                 {
                     try
