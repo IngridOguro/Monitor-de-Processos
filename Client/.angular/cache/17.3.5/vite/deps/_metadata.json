@@ -1,61 +1,70 @@
 {
-  "hash": "88ea49a4",
-  "configHash": "84510643",
+  "hash": "fb427860",
+  "configHash": "d2241991",
   "lockfileHash": "216bcc32",
-  "browserHash": "8b691b57",
+  "browserHash": "fb67a9e2",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "b7ab19a7",
+      "fileHash": "0324dc27",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "a3e80ed8",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "02c56cb6",
+      "fileHash": "6bccf7a0",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "07ea8d83",
+      "fileHash": "ee0d4d79",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "a6a123be",
+      "fileHash": "b4226464",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "2f6ebf56",
+      "fileHash": "ee65c099",
       "needsInterop": false
     },
     "chart.js/auto": {
       "src": "../../../../../../node_modules/chart.js/auto/auto.js",
       "file": "chart__js_auto.js",
-      "fileHash": "dfe2ce85",
+      "fileHash": "c42e4920",
       "needsInterop": false
     },
     "highcharts": {
       "src": "../../../../../node_modules/highcharts/highcharts.js",
       "file": "highcharts.js",
-      "fileHash": "24c4fac0",
+      "fileHash": "ce1df6d5",
       "needsInterop": true
     },
     "highcharts-angular": {
       "src": "../../../../../node_modules/highcharts-angular/fesm2022/highcharts-angular.mjs",
       "file": "highcharts-angular.js",
-      "fileHash": "ecb4765c",
+      "fileHash": "fbe6070e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-NP2O4LEN": {
-      "file": "chunk-NP2O4LEN.js"
+    "chunk-DAO7SJ43": {
+      "file": "chunk-DAO7SJ43.js"
+    },
+    "chunk-DWRD27DP": {
+      "file": "chunk-DWRD27DP.js"
     },
     "chunk-4WBH36BR": {
       "file": "chunk-4WBH36BR.js"

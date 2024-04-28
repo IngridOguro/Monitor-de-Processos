@@ -1,45 +1,34 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 //import {fetch} from 'node-fetch';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
-export class TableComponent {
+export class TableComponent implements OnInit{
+constructor(private http: HttpClient){
 
+}
 
-  // AUTENTICAR
-  mensagem:string="";
-  autenticar():void{
+ngOnInit(): void {
+    this.fetchDetails();
+}
 
-        console.log(this.ListarProcessos());
-
-  }
-
-ListarProcessos(){
-  async function fazerRequisicao() {
-    const url = 'https://localhost:7055/Processos';
-    const options = {
-      method: 'GET',
-      headers: {
-        'Accept': 'text/plain'
-      }
-    };
-
-    try {
-      const resposta = await fetch(url, options);
-      const texto = await resposta.json();
-      console.log('Resposta:', texto);
-    } catch (erro) {
-      console.error('Erro ao fazer requisição:', erro);
+public fetchDetails(){
+  this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe(
+    (resp:any) => {
+      console.log(resp)
     }
-  }
-
-  fazerRequisicao();
-
+  )
 }
 }
+
+
+
+
+
