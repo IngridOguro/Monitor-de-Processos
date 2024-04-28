@@ -32,3 +32,4 @@ C:\Users\Shizue\Desktop\Monitor de processos\Monitor-de-Processos\Server\Api\Api
 C:\Users\Shizue\Desktop\Monitor de processos\Monitor-de-Processos\Server\Api\Api\obj\Debug\net8.0\Api.pdb
 C:\Users\Shizue\Desktop\Monitor de processos\Monitor-de-Processos\Server\Api\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\Shizue\Desktop\Monitor de processos\Monitor-de-Processos\Server\Api\Api\obj\Debug\net8.0\ref\Api.dll
+C:\Users\Shizue\Desktop\Monitor de processos\Monitor-de-Processos\Server\Api\Api\bin\Debug\net8.0\Newtonsoft.Json.dll

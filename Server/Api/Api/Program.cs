@@ -1,3 +1,4 @@
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,14 +17,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var processes = new List<Process>
-{
-    new Process { ProcessName = "edge", MemoryUsage = 1, CpuUsage = 1},
-};
-
 app.MapGet("/process", () =>
 {
-    return processes;
+    // Chame a função de HelloWorld.cs
+    var message = Processes.ListarProcessos();
+
+    // Retorne a mensagem
+    return Results.Ok(message);
 });
 
 app.Run();
