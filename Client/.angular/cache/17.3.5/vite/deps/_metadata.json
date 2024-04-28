@@ -1,55 +1,55 @@
 {
-  "hash": "afa602cf",
+  "hash": "b04cf86d",
   "configHash": "84510643",
-  "lockfileHash": "39058967",
-  "browserHash": "6978a0fe",
+  "lockfileHash": "b3727e08",
+  "browserHash": "308dae3f",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "28856e54",
+      "fileHash": "efe23461",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "0ebcf307",
+      "fileHash": "d60b416c",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "a51dbbd2",
+      "fileHash": "2b9777f7",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "ff9cb72f",
+      "fileHash": "2f969e78",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "2c2be4db",
+      "fileHash": "2005ef58",
       "needsInterop": false
     },
     "chart.js/auto": {
       "src": "../../../../../../node_modules/chart.js/auto/auto.js",
       "file": "chart__js_auto.js",
-      "fileHash": "7568fd30",
+      "fileHash": "007d2a03",
       "needsInterop": false
     },
     "highcharts": {
       "src": "../../../../../node_modules/highcharts/highcharts.js",
       "file": "highcharts.js",
-      "fileHash": "13bbb218",
+      "fileHash": "fe841ee4",
       "needsInterop": true
     },
     "highcharts-angular": {
       "src": "../../../../../node_modules/highcharts-angular/fesm2022/highcharts-angular.mjs",
       "file": "highcharts-angular.js",
-      "fileHash": "7ea49216",
+      "fileHash": "35d96d37",
       "needsInterop": false
     }
   },
