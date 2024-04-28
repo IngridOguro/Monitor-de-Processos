@@ -32,20 +32,20 @@ namespace Processos;
                     {
                         try{
                             using (PerformanceCounter diskCounter = new PerformanceCounter("Process", "IO Data Bytes/sec", allProcesses[processo].ProcessName))
-                        {
+                            {
                             diskCounter.NextValue(); 
                             System.Threading.Thread.Sleep(50); 
                             float diskUsage = diskCounter.NextValue() / (1024 * 1024); 
                             Processos[nomeProcesso][$"{processo}"]["disc"] = diskUsage;
                             //Console.WriteLine($"{nomeProcesso} disco: " + diskUsage + " MB/s");
-                        }
+                            }
                             using (PerformanceCounter networkCounter = new PerformanceCounter("Process", "IO Other Bytes/sec", allProcesses[processo].ProcessName))
-                        {
+                            {
                             networkCounter.NextValue(); 
                             System.Threading.Thread.Sleep(1000); 
                             float networkUsage = networkCounter.NextValue() / (1024 * 1024); 
                             Processos[nomeProcesso][$"{processo}"]["network"] = networkUsage;
-                        }
+                            }
                         }
                         catch (InvalidOperationException ex)
                             {
