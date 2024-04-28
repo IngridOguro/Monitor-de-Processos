@@ -20,7 +20,6 @@ namespace WebApplication1.Controllers
         public ProcessosController(ILogger<ProcessosController> logger)
         {
             _logger = logger;
-
         }
 
         public static Dictionary<string, Dictionary<string, Dictionary<string, double>>> Processos = new Dictionary<string, Dictionary<string, Dictionary<string, double>>>();
@@ -38,8 +37,6 @@ namespace WebApplication1.Controllers
                 string nomeProcesso = allProcesses[processo].ProcessName;
                 Console.WriteLine(allProcesses[processo]);
                 try { 
-                    
-
                     if (!Processos.ContainsKey(nomeProcesso))
                     {
                         Processos[nomeProcesso] = new Dictionary<string, Dictionary<string, double>>();
@@ -52,7 +49,6 @@ namespace WebApplication1.Controllers
 
                     Processos[nomeProcesso][$"{processo}"]["cpu"] = cpu;
                     Processos[nomeProcesso][$"{processo}"]["memo"] = memory;
-
                 }
                 catch(Exception ex)
                 {
